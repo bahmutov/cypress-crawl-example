@@ -1,8 +1,9 @@
 {
   "name": "cypress-crawl-example",
   "version": "1.0.0",
-  "description": "",
+  "description": "Crawling all local pages using Cypress example",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "serve -p 4700 public",
@@ -15,6 +16,7 @@
   "devDependencies": {
     "cypress": "^9.2.0",
     "prettier": "^2.5.1",
-    "serve": "^13.0.2"
+    "serve": "^13.0.2",
+    "start-server-and-test": "^1.14.0"
   }
 }
