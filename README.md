@@ -8,6 +8,10 @@ Cypress is not built to be a fast crawler, but for simple tests it will do. In t
 
 In [spec2.js](./cypress/integration/spec2.js) we resolve duplicate URLs by checking them using [cy.request](https://on.cypress.io/request) and taking the redirected URL.
 
+## Videos
+
+- [Crawl Local Pages Using Cypress](https://youtu.be/FDNeiwKWdb4)
+
 ## To run
 
 ```
