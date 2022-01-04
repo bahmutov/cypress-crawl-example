@@ -13,7 +13,11 @@ it('crawls all local pages', () => {
       return
     }
 
-    const url = toVisit.pop()
+    cy.log(`to visit: ${toVisit.join(', ')}`)
+    // .pop() removes the last element from the array
+    // .shift() removes the first element from the array
+    // I prefer to take the first link to have breadth-first traversal
+    const url = toVisit.shift()
     if (visited.has(url)) {
       return visitNextUrl()
     }
@@ -29,11 +33,17 @@ it('crawls all local pages', () => {
         const localUrls = $links
           .toArray()
           .map((link) => link.getAttribute('href'))
-          .filter((url) => !url.startsWith('http'))
+          // do not visit other domains
+          .filter((url) => !url.startsWith('http') && !url.startsWith('//'))
+          // we have already seen this URL
           .filter((url) => !visited.has(url))
+          // we have already queued this URL
+          .filter((url) => !toVisit.includes(url))
         cy.log(`found ${localUrls.length} new link(s) to visit`)
         toVisit.push(...localUrls)
       })
+      // cy.then automatically waits for all links above to be added
+      // before continuing with the next URL
       .then(visitNextUrl)
   }
 
