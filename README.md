@@ -8,6 +8,12 @@ Cypress is not built to be a fast crawler, but for simple tests it will do. In t
 
 In [spec2.js](./cypress/integration/spec2.js) we resolve duplicate URLs by checking them using [cy.request](https://on.cypress.io/request) and taking the redirected URL.
 
+## Testing 404 page
+
+There is automatic 404 page when trying to visit a non-existent page. The test in [404-spec.js](./cypress/integration/404-spec.js) implements the test.
+
+![404 spec](./images/404-spec.png)
+
 ## Videos
 
 - [Crawl Local Pages Using Cypress](https://youtu.be/FDNeiwKWdb4)
