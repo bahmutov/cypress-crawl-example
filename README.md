@@ -17,6 +17,7 @@ There is automatic 404 page when trying to visit a non-existent page. The test i
 ## Videos
 
 - [Crawl Local Pages Using Cypress](https://youtu.be/FDNeiwKWdb4)
+- [Test 404 Page](https://youtu.be/0OfILKbqbsg)
 
 ## To run
 

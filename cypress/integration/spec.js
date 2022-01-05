@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+// watch the video "Crawl Local Pages Using Cypress"
+// https://youtu.be/FDNeiwKWdb4
 it('crawls all local pages', () => {
   // let's keep track of all URLs we've visited
   // NOTE: these URLs do not disambiguate between pages
