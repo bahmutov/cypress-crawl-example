@@ -1,0 +1,19 @@
+name: ci
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v2
+
+      - name: Print Node version 🖨
+        run: node --version
+      - name: Print NPM version 🖨
+        run: npm --version
+
+      - name: Run tests 🧪
+        # https://github.com/cypress-io/github-action
+        uses: cypress-io/github-action@v2
+        with:
+          start: npm start

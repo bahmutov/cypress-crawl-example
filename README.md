@@ -1,4 +1,4 @@
-# cypress-crawl-example
+# cypress-crawl-example ![cypress version](https://img.shields.io/badge/cypress-9.2.0-brightgreen)
 
 > Crawling all local pages using Cypress example
 
