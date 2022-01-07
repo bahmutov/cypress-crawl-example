@@ -14,6 +14,12 @@ There is automatic 404 page when trying to visit a non-existent page. The test i
 
 ![404 spec](./images/404-spec.png)
 
+## Blog posts
+
+**Note:** please do not rename the spec files, as the blog post refers to them via GitHub links.
+
+- [Crawl Local Pages Using Cypress](https://glebbahmutov.com/blog/crawl-using-cypress/)
+
 ## Videos
 
 - [Crawl Local Pages Using Cypress](https://youtu.be/FDNeiwKWdb4)

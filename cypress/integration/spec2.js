@@ -38,12 +38,18 @@ it('crawls all local pages with resolving duplicates', () => {
         localUrls.forEach((url) => {
           cy.request({ url, log: false })
             .its('redirects', { log: false })
+            // resources without redirects will
+            // not have the property "redirects"
+            // so prevent Cypres from throwing an error
             .should(Cypress._.noop)
             .then((redirects) => {
               if (Array.isArray(redirects) && redirects.length > 0) {
                 // each redirect record is like "301: URL"
+                // so grab the last redirect and parse it
+                // that will be the final address
                 const redirectedUrl =
                   redirects[redirects.length - 1].split(' ')[1]
+                // keep just the local part of the full URL
                 const parsed = new URL(redirectedUrl)
                 redirected.push(parsed.pathname)
               } else {
@@ -53,6 +59,7 @@ it('crawls all local pages with resolving duplicates', () => {
         })
 
         cy.then(() => {
+          // remove all visited and queued URLs
           const newUrls = redirected
             .filter((url) => !visited.has(url))
             .filter((url) => !toVisit.includes(url))
