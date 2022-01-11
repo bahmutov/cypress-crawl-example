@@ -1,4 +1,4 @@
-# cypress-crawl-example [![renovate-app badge][renovate-badge]][renovate-app] ![cypress version](https://img.shields.io/badge/cypress-9.2.0-brightgreen) [![ci](https://github.com/bahmutov/cypress-crawl-example/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bahmutov/cypress-crawl-example/actions/workflows/ci.yml)
+# cypress-crawl-example [![renovate-app badge][renovate-badge]][renovate-app] ![cypress version](https://img.shields.io/badge/cypress-9.2.1-brightgreen) [![ci](https://github.com/bahmutov/cypress-crawl-example/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bahmutov/cypress-crawl-example/actions/workflows/ci.yml)
 
 > Crawling all local pages using Cypress example
 
