@@ -15,7 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "9.7.0",
-    "prettier": "3.2.4",
+    "prettier": "3.2.5",
     "serve": "14.2.1",
     "start-server-and-test": "2.0.3"
   }
