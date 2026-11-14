@@ -16,7 +16,7 @@
   "devDependencies": {
     "cypress": "9.7.0",
     "prettier": "3.10.1",
-    "serve": "14.2.7",
+    "serve": "14.2.8",
     "start-server-and-test": "3.0.13"
   }
 }
